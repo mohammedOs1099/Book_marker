@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="text-center m-5">
+      <h1 class="d-inline position-relative">Bookmarker</h1>
+    </header>
+    <div class="container position-relative">
+      <div class="form-group mb-5">
+        <h2 class="text-center mb-3">
+          <i class="text-success px-1 fa-solid fa-seedling"></i>Bookmark your
+          favorite sites<i class="text-success px-1 fa-solid fa-seedling"></i>
+        </h2>
+        <div class="d-flex flex-column justify-content-center mb-3">
+          <label for="sitName" class="p-2"
+            ><i class="fa-solid fa-book-bookmark pe-2"></i> sit Name</label
+          >
+          <input
+            type="text"
+            id="sitName"
+            class="form-control"
+            placeholder="Bookmark Name"
+          />
+        </div>
+        <div class="d-flex flex-column justify-content-center mb-3">
+          <label for="siteUrl" class="p-2"
+            ><i class="fa-solid fa-link pe-2 pe-2"></i> sit URL</label
+          >
+          <input
+            type="text"
+            id="siteUrl"
+            class="form-control"
+            placeholder="Website URL"
+          />
+        </div>
+        <button
+          id="submit"
+          class="btn btn-group btn-outline-success d-block m-auto btn-lg px-5 text-center"
+        >
+          submit
+        </button>
+      </div>
+      <div
+        class="box-info  position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center visually-hidden"
+      >
+        <div class="box-conent bg-light p-4 rounded-2  shadow-lg">
+          <header
+            class="box-header w-100 d-flex justify-content-end  "
+          >
+            <button onclick="closeInvalidBtn()" class="btn border-0" id="closeBtn">
+              <i class="fa-solid fa-xmark close text-danger fs-3"></i>
+            </button>
+          </header>
+          <p class="m-0 p-2 text-danger ">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ol class="rules text-success list-unstyled m-0">
+            <li>
+              <i class="fa-regular fa-circle-right p-2  "></i>Site name must begin with capital letter and
+              contain at least 3 characters
+            </li>
+            <li>
+              <i class="fa-regular fa-circle-right  p-2  "></i>Site URL must be a
+              valid one
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <table class="table text-center">
+        <thead>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Viset</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="display"></tbody>
+      </table>
+    </div>
+
+    <div class="w-100 h-100 bg-danger">
+      <div class="w-50 bg-black"></div>
+      <div class="w-50 bg-danger"></div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/mine.js"></script>
+  </body>
+</html>
